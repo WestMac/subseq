@@ -29,4 +29,20 @@ function subsequence(input) {
 
 }
 
+let std  = '11111'
+let std1 = '?23'
+let std2 = '1?2?3'
+let std3 = '?32?'
 
+function numberOf(stdin) {
+let result = (stdin.split()).pop()
+if(result[0] === '?') {
+	result = result.replace(/[0-9]/g, '')
+	result = Math.pow(10,result.length - 1)
+	result = result * 9
+	} else {	
+		result = result.replace(/[0-9]/g, '')
+		result = Math.pow(10,result.length)
+	}
+return result
+}
